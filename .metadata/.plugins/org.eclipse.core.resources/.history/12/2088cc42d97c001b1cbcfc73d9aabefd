@@ -1,0 +1,29 @@
+package com.tmgt.model.dao;
+
+import java.sql.Connection;
+import java.util.List;
+
+import com.tmgt.connectionfactory.ConnectionFactory;
+
+public class TranieeDaoImpl implements TranieeDao {
+
+	private Connection connection;
+	
+	
+	public TranieeDaoImpl() {
+		connection =ConnectionFactory.getConnection();
+	}
+
+	@Override
+	public void addTraniee(Traniee traniee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Traniee> getAllTraniee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

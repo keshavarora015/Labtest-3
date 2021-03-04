@@ -1,0 +1,5 @@
+package com.tmgt.model.service;
+
+public interface TranieeService {
+
+}

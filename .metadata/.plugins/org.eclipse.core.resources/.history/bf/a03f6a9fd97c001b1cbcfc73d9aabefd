@@ -1,0 +1,39 @@
+package com.tmgt.model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.tmgt.connectionfactory.ConnectionFactory;
+import com.tmgt.exception.DataAccessException;
+
+public class TranieeDaoImpl implements TranieeDao {
+
+	private Connection connection;
+	
+	
+	public TranieeDaoImpl() {
+		connection =ConnectionFactory.getConnection();
+	}
+
+	@Override
+	public void addTraniee(Traniee traniee) {
+		try {
+			PreparedStatement pstmt = connection.prepareStatement("insert into trainee(name,branch,percentage) values(?,?,?)");
+			pstmt.setString(1, traniee.getName());
+			pstmt.setString(2, traniee.getBranch());
+			pstmt.setDouble(3, traniee.getPercentage());
+			pstmt.executeUpdate();
+			} catch (SQLException e) {
+			throw new DataAccessException("Exception occured in adding trainee record");
+			}
+	}
+
+	@Override
+	public List<Traniee> getAllTraniee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

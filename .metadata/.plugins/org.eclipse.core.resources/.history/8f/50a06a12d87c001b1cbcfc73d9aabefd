@@ -1,0 +1,19 @@
+package com.tmgt.model.dao;
+
+import java.util.List;
+
+public class TranieeDaoImpl implements TranieeDao {
+
+	@Override
+	public void addTraniee(Traniee traniee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Traniee> getAllTraniee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

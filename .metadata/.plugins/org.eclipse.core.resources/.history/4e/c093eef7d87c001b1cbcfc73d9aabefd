@@ -1,0 +1,30 @@
+package com.tmgt.model.dao;
+
+import java.util.List;
+
+import org.apache.tomcat.dbcp.dbcp2.ConnectionFactory;
+
+import com.mysql.jdbc.Connection;
+
+public class TranieeDaoImpl implements TranieeDao {
+
+	private Connection connection;
+	
+	
+	public TranieeDaoImpl() {
+		connection =ConnectionFactory;
+	}
+
+	@Override
+	public void addTraniee(Traniee traniee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Traniee> getAllTraniee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

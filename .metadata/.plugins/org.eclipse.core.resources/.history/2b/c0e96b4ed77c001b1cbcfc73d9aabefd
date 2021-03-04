@@ -1,0 +1,5 @@
+package com.tmgt.model.dao;
+
+public interface TranieeDao {
+
+}
